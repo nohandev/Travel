@@ -1,0 +1,57 @@
+.explorer {
+  margin: 6em 0;
+  padding: 0 1em;
+}
+
+.explore-content {
+  @include d-flex(column, center, center);
+  gap: 2em;
+
+  h1 {
+    @include format-font(20px, 2.3em, 50px, 500);
+    color: $dark;
+    text-align: center;
+  }
+}
+
+.explore-card-container {
+  width: 100%;
+  @include d-flex(row, center, center);
+  gap: 0.5em;
+}
+
+.explore-card {
+  flex: 1;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+}
+
+.explore-description-card {
+  position: absolute;
+  bottom: 3em;
+  left: 12.5%;
+  background-color: $primary-light;
+  width: 75%;
+  padding: 1em 0;
+  border-radius: 14px;
+  text-align: center;
+
+  h1 {
+    @include format-font(18px, 2em, 30px, 500); 
+    color: $dark;
+  }
+
+  p {
+    color: $secondary-light;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .explore-card-container {
+    flex-direction: column;
+  }
+}
