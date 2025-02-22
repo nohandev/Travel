@@ -1,0 +1,26 @@
+.marketing {
+  margin: 4em 0;
+  padding: 0 1em;
+}
+
+.marketing-content {
+  background-color: $primary;
+  color: $primary-light;
+  @include d-flex(column, center, center);
+  padding: 4em 1em;
+  row-gap: 1.2em;
+  border-radius: 14px;
+  text-align: center;
+
+  h1 {
+    @include format-font(20px, 2.3em, 50px, 700);
+  }
+
+  p {
+    @include format-font(16px, 1.2em, 30px, 500); 
+  }
+
+  button {
+    @include template-btn(10px, 20px, $primary, $primary-light, $primary-light, $primary, 1px solid $primary-light);
+  }
+}

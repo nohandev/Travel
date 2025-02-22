@@ -4,6 +4,8 @@
 @import './partials/more-infos';
 @import './partials/discorver';
 @import './partials/explorer';
+@import './partials/marketing';
+@import './partials/footer';
 
 * {
   padding: 0;
@@ -23,8 +25,5 @@ header {
   left: 0;
 }
 
-.display1360 {
-  width: 100%;
-  max-width: 1360px;
-  margin: 0 auto;
-}
+.display1360 {@include limited-display(1360px);}
+.display1520 {@include limited-display(1520px);}

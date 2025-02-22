@@ -1,0 +1,9 @@
+footer {
+  background-color: $primary;
+  color: $primary-light;
+  padding: 2em 1em;
+  text-align: center;
+  p {
+    @include format-font(10px, 18px, 22px, 500);
+  }
+}

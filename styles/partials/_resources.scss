@@ -32,3 +32,9 @@ $secondary-light: #959595;
     cursor: pointer;
   }
 }
+
+@mixin limited-display($max-width) {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
