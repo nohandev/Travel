@@ -1,0 +1,69 @@
+.hero {
+  background-image: url(./../assets/bg-hero.png);
+  background-position: top center;
+  background-size: cover;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.hero-content {
+  @include d-flex(column, center, center);
+  row-gap: 1em;
+  color: $primary-light;
+  text-align: center;
+  opacity: 0;
+  animation: show-elements 700ms 400ms ease forwards;
+
+  h2 {
+    @include format-font(16px, 24px, 32px, 600);
+  }
+
+  h1 {
+    @include format-font(12px, 40px, 50px, 600);
+  }
+
+  button {
+    @include template-btn(8px, 16px, $primary-light, $primary, $primary, $primary-light, 1px solid $primary);
+  }
+
+  .group-links {
+    width: 30%;
+    @include d-flex(row, space-around, center);
+ 
+    a {
+      color: $primary-light;
+      font-size: 2em;
+      transition: 400ms ease;
+      &:hover {
+        color: $primary;
+        transform: translateY(15px) scale(1.4);
+        
+      }
+    }
+
+  }
+}
+
+
+@keyframes show-elements {
+  from {
+    opacity: 0;
+    transform: translateY(-3em);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .navigation-container {
+    display: none;
+  }
+}

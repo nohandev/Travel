@@ -1,0 +1,29 @@
+@import './partials/resources';
+@import './partials/navbar';
+@import './partials/hero';
+@import './partials/more-infos';
+@import './partials/discorver';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+ul, a {
+  list-style: none;
+  text-decoration:none;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.display1360 {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+}

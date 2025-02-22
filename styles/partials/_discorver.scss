@@ -1,0 +1,53 @@
+.discorver {
+  margin: 3em 0;
+  padding: 0 1em;
+}
+
+.discover-content {
+  @include d-flex(column, center, center);
+  gap: 2em;
+
+  h1 {
+    @include format-font(20px, 2.3em, 50px, 500);
+    color: $dark;
+    max-width: 400px;
+    text-align: center;
+  }
+}
+
+.discover-card-container {
+  width: 100%;
+  @include d-flex(row, center, center);
+  gap: 1.2em;
+}
+
+.discover-card {
+  flex: 1;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+}
+
+.description-card {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+  
+
+  h1 {
+    @include format-font(18px, 2em, 30px, 600); 
+    color: $primary-light;
+  }
+
+  p {
+    color: $primary-light;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .discover-card-container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1em 0;
+  position: absolute;
+  top: 0;
+  animation: show-elements 700ms ease;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  column-gap: 3em;
+
+  li a {
+    color: $primary-light;
+    @include format-font(18px, 24px, 32px, 300);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
