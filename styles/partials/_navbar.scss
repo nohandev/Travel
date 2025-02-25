@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1em 0;
+  padding: 1em 1em;
   position: absolute;
   top: 0;
   animation: show-elements 700ms ease;
@@ -21,5 +21,57 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+.navigation-mobile-btn {
+  display: none;
+  padding: .3em .488em;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.navigation-mobile-overlay {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: $primary-light;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  @include d-flex (column, center, center);
+  @include format-font(16px, 24px, 32px, 500);
+  row-gap: 20px;
+  display: none;
+  
+  ul li {
+    padding: .6em 0;
+    text-align: center;
+    a {
+      color: $dark;
+    }
+  }
+}
+
+.close-mobile-navigation {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: none;
+  background-color: $crismon;
+  color: $primary-light;
+  font-size: 1em;
+  padding: .4em .6em;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+
+  .navigation-mobile-btn {
+    display: block;
   }
 }

@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1em 0;
+  padding: 1em 1em;
   position: absolute;
   top: 0;
   animation: show-elements 700ms ease;
@@ -25,6 +25,59 @@
   text-decoration: underline;
 }
 
+.navigation-mobile-btn {
+  display: none;
+  padding: 0.3em 0.488em;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.navigation-mobile-overlay {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #f8f8f8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  row-gap: 20px;
+  display: none;
+}
+.navigation-mobile-overlay ul li {
+  padding: 0.6em 0;
+  text-align: center;
+}
+.navigation-mobile-overlay ul li a {
+  color: #202020;
+}
+
+.close-mobile-navigation {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  border: none;
+  background-color: #BA110C;
+  color: #f8f8f8;
+  font-size: 1em;
+  padding: 0.4em 0.6em;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    display: none;
+  }
+  .navigation-mobile-btn {
+    display: block;
+  }
+}
 .hero {
   background-image: url(./../assets/bg-hero.png);
   background-position: top center;
@@ -94,11 +147,6 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@media screen and (max-width: 768px) {
-  .navigation-container {
-    display: none;
   }
 }
 .more-infos {

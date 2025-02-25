@@ -5,6 +5,7 @@ $primary: #2B6F3E;
 $dark: #202020;
 $primary-light: #f8f8f8;
 $secondary-light: #959595;
+$crismon : #BA110C;
 
 @mixin format-font($min, $med, $max, $weight) {
   font-size: clamp($min, $med, $max);

@@ -8,8 +8,6 @@
   align-items: center;
 }
 
-
-
 .hero-content {
   @include d-flex(column, center, center);
   row-gap: 1em;
@@ -58,12 +56,5 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-
-@media screen and (max-width: 768px) {
-  .navigation-container {
-    display: none;
   }
 }
